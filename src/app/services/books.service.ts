@@ -28,11 +28,11 @@ export class BooksService {
                         publishedDate: doc.first_publish_year ? doc.first_publish_year.toString() : undefined
                     }
                 } as Book));
-            }),
-            catchError(error => {
+            })
+            /* ,catchError(error => {
                 console.warn('API Error:', error);
                 return of([]);
-            })
+            }) */
         );
     }
 }
